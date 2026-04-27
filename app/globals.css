@@ -15,3 +15,7 @@
     -apple-system,
     sans-serif;
 }
+
+.compress-text-height {
+  transform: scaleY(0.9);
+}
