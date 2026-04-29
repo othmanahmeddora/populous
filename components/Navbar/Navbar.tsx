@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const navMenu = useRef(null);
   const bigNavLinks = useRef<(HTMLAnchorElement | null)[]>([]);
+  const menuOverlay = useRef(null);
 
   useGSAP(() => {
     gsap.set(navMenu.current, {
@@ -37,6 +38,24 @@ const Navbar = () => {
         duration: 0.8,
         ease: "power4.inOut",
       });
+
+      tl.to(
+        menuOverlay.current,
+        {
+          opacity: isActive ? 1 : 0,
+          duration: 0.5,
+          ease: "power2.inOut",
+        },
+        "<",
+      );
+
+      // tl.to(
+      //   menuOverlay.current,
+      //   {
+      //     height: isActive ? "100vh" : "0",
+      //   },
+      //   "<",
+      // );
 
       if (isActive) {
         tl.from(bigNavLinks.current, {
@@ -71,6 +90,10 @@ const Navbar = () => {
         </section>
       </section>
 
+      <section
+        ref={menuOverlay}
+        className="fixed top-0 left-0 h-screen w-screen bg-black/80 opacity-0 z-10 pointer-events-none"
+      ></section>
       <section
         ref={navMenu}
         className="fixed top-[1.5rem] right-[1.5rem] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)] z-20 bg-light rounded-[.5rem] h-[95%] w-[50%]"
