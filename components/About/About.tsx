@@ -1,8 +1,15 @@
+"use client";
+
+import { useState } from "react";
+
 import { FaPlay } from "react-icons/fa";
+import { TfiClose } from "react-icons/tfi";
 
 const About = () => {
+  const [isPlay, setIsPlay] = useState(false);
+
   return (
-    <section className="bg-light w-full">
+    <section className="relative bg-light w-full">
       <section className="max-w-[1600px] flex items-start justify-between mx-auto pt-[2rem] pb-[10rem] px-[1rem]">
         <p className="flex-1 max-w-[30rem] text-[1.75rem] font-[400] leading-[2rem]">
           We’re a global design firm with colleagues spanning four continents
@@ -10,14 +17,17 @@ const About = () => {
           moments.
         </p>
 
-        <button>
-          <section className="relative overflow-hidden group">
+        <button
+          className="cursor-pointer group"
+          onClick={() => setIsPlay(true)}
+        >
+          <section className="relative overflow-hidden">
             <video
               src="/hero_video.mp4"
               className="w-[25rem] brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all ease-out duration-200"
             ></video>
 
-            <button className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[1rem] bg-light rounded-[.25rem] cursor-pointer">
+            <button className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[1rem] bg-light rounded-[.25rem]">
               <FaPlay className="w-[.75rem] h-[.75rem]" />
             </button>
           </section>
@@ -30,6 +40,22 @@ const About = () => {
           </section>
         </button>
       </section>
+
+      {isPlay && (
+        <section
+          className="fixed top-0 left-0 h-screen w-screen bg-dark/90 z-[20]"
+          onClick={() => setIsPlay(false)}
+        >
+          <TfiClose className="absolute top-[1.5rem] right-[3rem] text-[2rem] cursor-pointer text-light" />
+
+          <video
+            src="/hero_video.mp4"
+            className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+            controls
+            autoPlay
+          ></video>
+        </section>
+      )}
     </section>
   );
 };
