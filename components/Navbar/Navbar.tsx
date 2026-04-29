@@ -49,22 +49,13 @@ const Navbar = () => {
         "<",
       );
 
-      // tl.to(
-      //   menuOverlay.current,
-      //   {
-      //     height: isActive ? "100vh" : "0",
-      //   },
-      //   "<",
-      // );
-
-      if (isActive) {
-        tl.from(bigNavLinks.current, {
-          y: "100%",
-          duration: 0.4,
-          stagger: 0.1,
-          ease: "power4.out",
-        });
-      }
+      tl.from(bigNavLinks.current, {
+        opacity: isActive ? 1 : 0,
+        y: isActive ? "100%" : "0",
+        duration: 0.4,
+        stagger: 0.1,
+        ease: "power4.out",
+      });
     },
     { dependencies: [isActive] },
   );
@@ -92,7 +83,7 @@ const Navbar = () => {
 
       <section
         ref={menuOverlay}
-        className="fixed top-0 left-0 h-screen w-screen bg-black/80 opacity-0 z-10 pointer-events-none"
+        className="fixed top-0 left-0 h-screen w-screen bg-black/50 opacity-0 z-10 pointer-events-none"
       ></section>
       <section
         ref={navMenu}
