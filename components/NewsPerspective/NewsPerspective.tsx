@@ -15,7 +15,7 @@ const NewsPerspective = () => {
   console.log("news length", newsPerspective.length - 1);
 
   return (
-    <section className="bg-light py-[5rem] w-full overflow-hidden">
+    <section className="bg-light py-[10rem] w-full overflow-hidden">
       <section className="max-w-[1600px] mx-auto">
         <section className="flex items-center justify-between mb-[1rem]">
           <h2 className="font-[400] text-[1.75rem]">News & Perspectives</h2>
@@ -71,7 +71,7 @@ const NewsPerspective = () => {
                 {item.type}
               </span>
 
-              <section className="overflow-hidden">
+              <section className="overflow-hidden w-full aspect-[16/10]">
                 <Image
                   src={item.thumbNail}
                   alt={item.title}

@@ -10,7 +10,7 @@ const About = () => {
 
   return (
     <section className="relative bg-light w-full">
-      <section className="max-w-[1600px] flex items-start justify-between mx-auto pt-[2rem] pb-[10rem] px-[1rem]">
+      <section className="max-w-[1600px] flex items-start justify-between mx-auto pt-[2rem] pb-[5rem] px-[1rem]">
         <p className="flex-1 max-w-[30rem] text-[1.75rem] font-[400] leading-[2rem]">
           We’re a global design firm with colleagues spanning four continents
           creating experiences that amplify the joy felt in shared human
