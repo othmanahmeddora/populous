@@ -82,7 +82,7 @@ const NewsPerspective = () => {
 
               <p className="mt-[.5rem] text-[.8rem] font-[400]">{item.date}</p>
 
-              <h3 className="mt-[.5rem] text-[1.25rem] font-[500] group-hover:underline tracking-tighter">
+              <h3 className="mt-[.5rem] text-[1.3rem] font-[500] group-hover:underline tracking-tighter leading-[1.75rem] max-w-[25rem]">
                 {item.title}
               </h3>
             </Link>
