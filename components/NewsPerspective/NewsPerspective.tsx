@@ -22,7 +22,7 @@ const NewsPerspective = () => {
 
           <section className="flex items-center gap-[.5rem]">
             <button
-              className="border border-dark p-[.5rem] rounded-[.2rem]"
+              className={`border border-dark p-[.5rem] rounded-[.2rem] ${slider === 0 ? "text-light-gray border-light-gray" : "hover:bg-theme hover:text-light hover:border-theme"}`}
               onClick={() => {
                 if (slider <= 1) {
                   setSlider(0);
@@ -37,7 +37,7 @@ const NewsPerspective = () => {
             </button>
 
             <button
-              className="border border-dark p-[.5rem] rounded-[.2rem]"
+              className={`border border-dark p-[.5rem] rounded-[.2rem] ${slider === newsPerspective.length - 2 ? "text-light-gray border-light-gray" : "hover:bg-theme hover:text-light hover:border-theme"}`}
               onClick={() => {
                 if (slider + 2 >= newsPerspective.length - 1) {
                   setSlider(newsPerspective.length - 2);
@@ -48,6 +48,7 @@ const NewsPerspective = () => {
             >
               <RiArrowRightLongLine />
             </button>
+
             <Link
               href="/"
               className="flex items-center gap-[1rem] px-[.5rem] py-[.45rem] text-[.8rem] font-[500] hover:bg-theme hover:text-white rounded-[.2rem]"
