@@ -3,6 +3,7 @@ import Explore from "@/components/Explore/Explore";
 import Hero from "@/components/Hero/Hero";
 import NewsPerspective from "@/components/NewsPerspective/NewsPerspective";
 import Projects from "@/components/Projects/Projects";
+import Sphere from "@/components/Sphere/Sphere";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <NewsPerspective />
       <Explore />
       <Projects />
+      <Sphere />
     </div>
   );
 }
