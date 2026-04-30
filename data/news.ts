@@ -9,23 +9,25 @@ export const newsPerspective = [
   {
     id: 1,
     thumbNail: "/img/10004.png",
-    title: "Populous Named as Designer for Kansas City Symphony Venue",
+    title: "Leading by Design: Taryn McQueen",
     date: "March 30, 2026",
-    type: "News",
+    type: "Perspective",
   },
   {
     id: 2,
     thumbNail: "/img/10005.jpg",
-    title: "Populous Named as Designer for Kansas City Symphony Venue",
+    title:
+      "Populous to design Moreton Bay Indoor Sports Center for Brisbane 2032",
     date: "March 30, 2026",
-    type: "News",
+    type: "Perspective",
   },
   {
     id: 3,
     thumbNail: "/img/10006.jpg",
-    title: "Populous Named as Designer for Kansas City Symphony Venue",
+    title:
+      "Palermo F.C. and Populous Collaborate on Redevelopment of Renzo Barbera Stadium",
     date: "March 30, 2026",
-    type: "News",
+    type: "Perspective",
   },
   {
     id: 4,
@@ -39,12 +41,13 @@ export const newsPerspective = [
     thumbNail: "/img/10008.jpg",
     title: "Populous Named as Designer for Kansas City Symphony Venue",
     date: "March 30, 2026",
-    type: "News",
+    type: "Perspective",
   },
   {
     id: 6,
     thumbNail: "/img/10009.jpg",
-    title: "Populous Named as Designer for Kansas City Symphony Venue",
+    title:
+      "Populous Expands Americas Design Leadership, Announces Loren Supp as Head of Design, Western U.S.",
     date: "March 30, 2026",
     type: "News",
   },
@@ -53,7 +56,7 @@ export const newsPerspective = [
     thumbNail: "/img/10010.jpg",
     title: "Populous Named as Designer for Kansas City Symphony Venue",
     date: "March 30, 2026",
-    type: "News",
+    type: "Perspective",
   },
   {
     id: 8,

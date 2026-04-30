@@ -58,7 +58,7 @@ const NewsPerspective = () => {
           </section>
         </section>
 
-        <section className="flex items-center w-full">
+        <section className="flex items-start w-full">
           {newsPerspective.map((item) => (
             <Link
               key={item.id}
