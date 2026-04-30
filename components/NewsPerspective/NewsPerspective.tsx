@@ -30,22 +30,30 @@ const NewsPerspective = () => {
           </section>
         </section>
 
-        <section className="flex items-center flex-nowrap w-full">
+        <section className="flex items-center w-full">
           {newsPerspective.map((item) => (
-            <Link key={item.id} href="/" className="w-full">
-              <span>{item.type}</span>
+            <Link
+              key={item.id}
+              href="/"
+              className="flex-shrink-0 w-[49.5%] mr-[1%] relative"
+            >
+              <span className="absolute top-[1rem] left-[1rem] px-[.5rem] py-[.2rem] bg-light rounded-[.2rem] text-[.8rem] font-[500]">
+                {item.type}
+              </span>
 
               <Image
                 src={item.thumbNail}
                 alt={item.title}
                 width={500}
                 height={500}
-                className=""
+                className="w-full h-full rounded-[.2rem]"
               />
 
-              <p>{item.date}</p>
+              <p className="mt-[.5rem] text-[.8rem] font-[400]">{item.date}</p>
 
-              <h3>{item.title}</h3>
+              <h3 className="mt-[.5rem] text-[1.25rem] font-[500] hover:underline tracking-tighter">
+                {item.title}
+              </h3>
             </Link>
           ))}
         </section>
