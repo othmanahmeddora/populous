@@ -9,6 +9,15 @@
   --color-light-gray: #a3b0b5;
 }
 
+@theme {
+  --breakpoint-3xl: 1024px;
+  --breakpoint-2xl: 820px;
+  --breakpoint-xl: 768px;
+  --breakpoint-lg: 425px;
+  --breakpoint-md: 375px;
+  --breakpoint-sm: 320px;
+}
+
 *,
 *::after,
 *::before {
