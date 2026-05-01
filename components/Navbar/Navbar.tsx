@@ -101,8 +101,8 @@ const Navbar = () => {
 
   return (
     <nav className="relative">
-      <section className="fixed top-[1rem] left-0 w-full z-15 mt-[1rem] px-[1rem]">
-        <section className="">
+      <section className="fixed top-[1rem] left-0 w-full z-15 mt-[1rem] px-[1rem] bg-transparent">
+        <section>
           <section className="max-w-[1850px] mx-auto flex items-center justify-between">
             <section className="h-[2rem] overflow-hidden">
               <section
@@ -246,7 +246,7 @@ const Navbar = () => {
         </section>
       </section>
 
-      <section className="absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] flex items-start gap-[17rem] z-15">
+      <section className="hidden 3xl:absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-15">
         <section className="flex flex-col">
           <Link href="/" className="hover:underline">
             Projects
