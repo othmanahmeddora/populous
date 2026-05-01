@@ -11,8 +11,6 @@ import { newsPerspective } from "@/data/news";
 
 const NewsPerspective = () => {
   const [slider, setSlider] = useState(0);
-  console.log("slider value: ", slider);
-  console.log("news length", newsPerspective.length - 1);
 
   return (
     <section className="bg-light py-[10rem] w-full overflow-hidden">
@@ -26,10 +24,8 @@ const NewsPerspective = () => {
               onClick={() => {
                 if (slider <= 1) {
                   setSlider(0);
-                  console.log("left slider: ", slider);
                 } else {
                   setSlider(slider - 2);
-                  console.log("left slider: ", slider);
                 }
               }}
             >

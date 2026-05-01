@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import { gsap } from "gsap";
@@ -8,14 +8,27 @@ import { useGSAP } from "@gsap/react";
 
 import { IoIosSearch } from "react-icons/io";
 import { TfiClose } from "react-icons/tfi";
+import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [menuPosition, setMenuPosition] = useState(false);
+
   const navMenu = useRef(null);
   const bigNavLinks = useRef<(HTMLAnchorElement | null)[]>([]);
   const menuOverlay = useRef(null);
+  const topBar = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setMenuPosition(window.scrollY >= window.innerHeight - 60);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useGSAP(() => {
     gsap.set(navMenu.current, {
@@ -65,19 +78,35 @@ const Navbar = () => {
       <section className="fixed top-[1rem] left-0 w-full z-15 mt-[1rem] px-[1rem]">
         <section className="">
           <section className="max-w-[1850px] mx-auto flex items-center justify-between">
-            <Link
-              href="/"
-              className="text-light text-[1.5rem] font-[500] tracking-[.08em] compress-text-height"
-            >
-              POPULOUS
-            </Link>
+            <section className="h-[2rem] overflow-hidden">
+              <section>
+                <Link
+                  href="/"
+                  className="text-light text-[1.5rem] font-[500] tracking-[.08em] compress-text-height"
+                >
+                  POPULOUS
+                </Link>
+
+                <Image
+                  src="/img/10035.png"
+                  alt="Populous logo"
+                  width={30}
+                  height={30}
+                />
+              </section>
+            </section>
 
             <button
               onClick={() => setIsActive(true)}
               className="p-[1.5rem] cursor-pointer group flex flex-col items-center gap-[.3rem] hover:gap-[.4rem] transition-all ease-out duration-200"
             >
-              <span className="w-[2rem] h-[2px] bg-light block"></span>
-              <span className="w-[2rem] h-[2px] bg-light block group-hover:w-[1rem] transition-all ease-out duration-200"></span>
+              <span
+                ref={topBar}
+                className={`w-[2rem] h-[2px] block transition-colors duration-300 ${menuPosition ? "bg-dark" : "bg-light"}`}
+              ></span>
+              <span
+                className={`w-[2rem] h-[2px] block group-hover:w-[1rem] transition-all ease-out duration-200 ${menuPosition ? "bg-dark" : "bg-light"}`}
+              ></span>
             </button>
           </section>
         </section>
