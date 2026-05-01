@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Discipline = () => {
   return (
-    <section className="bg-light py-[10rem]">
+    <section className="bg-light py-[10rem] px-[1rem]">
       <section className="max-w-[1600px] mx-auto flex items-start justify-between">
         <h2 className="flex-1 text-[2.25rem]">Disciplines</h2>
 

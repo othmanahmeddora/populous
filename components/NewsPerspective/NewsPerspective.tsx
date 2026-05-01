@@ -13,7 +13,7 @@ const NewsPerspective = () => {
   const [slider, setSlider] = useState(0);
 
   return (
-    <section className="bg-light py-[10rem] w-full overflow-hidden">
+    <section className="bg-light py-[10rem] w-full overflow-hidden px-[1rem]">
       <section className="max-w-[1600px] mx-auto">
         <section className="flex items-center justify-between mb-[1rem]">
           <h2 className="font-[400] text-[1.75rem]">News & Perspectives</h2>
