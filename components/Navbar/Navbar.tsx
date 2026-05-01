@@ -5,25 +5,51 @@ import Link from "next/link";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { IoIosSearch } from "react-icons/io";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
   const [menuPosition, setMenuPosition] = useState(false);
+  const [isBottom, setIsBottom] = useState(false);
 
   const navMenu = useRef(null);
+  const navLogo = useRef(null);
   const bigNavLinks = useRef<(HTMLAnchorElement | null)[]>([]);
   const menuOverlay = useRef(null);
   const topBar = useRef(null);
 
   useEffect(() => {
+    let isPast = false;
+    let wasBottom = false;
+
     const handleScroll = () => {
-      setMenuPosition(window.scrollY >= window.innerHeight - 60);
+      const scrolled = window.scrollY >= 100;
+      const nearBottom =
+        window.scrollY >=
+        document.body.scrollHeight - (window.innerHeight + 500);
+
+      if (scrolled !== isPast) {
+        isPast = scrolled;
+        gsap.to(navLogo.current, {
+          y: scrolled ? "-50%" : "0%",
+          ease: "circ.inOut",
+          duration: 0.5,
+        });
+      }
+
+      setMenuPosition(window.scrollY >= window.innerHeight - 10);
+
+      if (nearBottom !== wasBottom) {
+        wasBottom = nearBottom;
+        setIsBottom(nearBottom);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -79,7 +105,10 @@ const Navbar = () => {
         <section className="">
           <section className="max-w-[1850px] mx-auto flex items-center justify-between">
             <section className="h-[2rem] overflow-hidden">
-              <section>
+              <section
+                ref={navLogo}
+                className={`transition-opacity duration-300 ${isBottom ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+              >
                 <Link
                   href="/"
                   className="text-light text-[1.5rem] font-[500] tracking-[.08em] compress-text-height"
@@ -87,18 +116,20 @@ const Navbar = () => {
                   POPULOUS
                 </Link>
 
-                <Image
-                  src="/img/10035.png"
-                  alt="Populous logo"
-                  width={30}
-                  height={30}
-                />
+                <Link href="/">
+                  <Image
+                    src="/img/10035.png"
+                    alt="Populous logo"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
               </section>
             </section>
 
             <button
               onClick={() => setIsActive(true)}
-              className="p-[1.5rem] cursor-pointer group flex flex-col items-center gap-[.3rem] hover:gap-[.4rem] transition-all ease-out duration-200"
+              className={`p-[1.5rem] cursor-pointer group flex flex-col items-center gap-[.3rem] hover:gap-[.4rem] transition-all ease-out duration-300 ${isBottom ? "opacity-0 pointer-events-none" : "opacity-100"}`}
             >
               <span
                 ref={topBar}
