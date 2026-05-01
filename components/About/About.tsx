@@ -17,7 +17,7 @@ const About = () => {
           moments.
         </p>
 
-        <button
+        <section
           className="cursor-pointer group"
           onClick={() => setIsPlay(true)}
         >
@@ -27,7 +27,7 @@ const About = () => {
               className="w-[25rem] brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all ease-out duration-200"
             ></video>
 
-            <button className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[1rem] bg-light rounded-[.25rem]">
+            <button className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[1rem] bg-light rounded-[.25rem] cursor-pointer">
               <FaPlay className="w-[.75rem] h-[.75rem]" />
             </button>
           </section>
@@ -38,7 +38,7 @@ const About = () => {
             </p>
             <p className="font-[400] text-[.75rem]">60 sec.</p>
           </section>
-        </button>
+        </section>
       </section>
 
       {isPlay && (
