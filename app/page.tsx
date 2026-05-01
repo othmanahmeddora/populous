@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import CTA from "@/components/CTA/CTA";
 import Discipline from "@/components/Discipline/Discipline";
 import Explore from "@/components/Explore/Explore";
 import Hero from "@/components/Hero/Hero";
@@ -18,6 +19,7 @@ export default function Home() {
       <Sphere />
       <Discipline />
       <Vision />
+      <CTA />
     </div>
   );
 }
