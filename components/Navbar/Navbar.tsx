@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -17,8 +16,6 @@ const Navbar = () => {
   const navMenu = useRef(null);
   const bigNavLinks = useRef<(HTMLAnchorElement | null)[]>([]);
   const menuOverlay = useRef(null);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
 
   useGSAP(() => {
     gsap.set(navMenu.current, {
@@ -65,7 +62,7 @@ const Navbar = () => {
 
   return (
     <nav className="relative">
-      <section className="fixed top-[1rem] left-0 w-full z-20 mt-[1rem] px-[1rem]">
+      <section className="fixed top-[1rem] left-0 w-full z-15 mt-[1rem] px-[1rem]">
         <section className="">
           <section className="max-w-[1850px] mx-auto flex items-center justify-between">
             <Link
@@ -92,13 +89,14 @@ const Navbar = () => {
 
         <section
           ref={navMenu}
-          className="fixed top-[1.5rem] right-[1.5rem] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)] z-20 bg-light rounded-[.5rem] h-[95%] w-[50%]"
+          className="fixed top-[1.5rem] right-[1.5rem] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)] z-30 bg-light rounded-[.5rem] h-[95%] w-[50%]"
         >
           <TfiClose
             onClick={() => setIsActive(false)}
             className="absolute top-[1rem] right-[1rem] text-[1.5rem] cursor-pointer"
           />
-          <section className="flex flex-col items-start justify-between h-full p-[1rem] z-[1]">
+
+          <section className="flex flex-col items-start justify-between h-full p-[1rem]">
             <section className="flex items-start justify-between w-full h-full">
               <nav className="flex-1 flex flex-col gap-0 text-[3rem] leading-[3rem] h-full">
                 <div className="overflow-hidden h-[3.5rem]">
@@ -188,7 +186,7 @@ const Navbar = () => {
         </section>
       </section>
 
-      <section className="absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] flex items-start gap-[17rem] z-20">
+      <section className="absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] flex items-start gap-[17rem] z-15">
         <section className="flex flex-col">
           <Link href="/" className="hover:underline">
             Projects

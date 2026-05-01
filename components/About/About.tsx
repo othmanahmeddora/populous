@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
 
 import { FaPlay } from "react-icons/fa";
 import { TfiClose } from "react-icons/tfi";
@@ -41,21 +42,23 @@ const About = () => {
         </section>
       </section>
 
-      {isPlay && (
-        <section
-          className="fixed top-0 left-0 h-screen w-screen bg-dark/90 z-[20]"
-          onClick={() => setIsPlay(false)}
-        >
-          <TfiClose className="absolute top-[1.5rem] right-[3rem] text-[2rem] cursor-pointer text-light" />
+      {isPlay &&
+        createPortal(
+          <section
+            className="fixed top-0 left-0 h-screen w-screen bg-dark/90 z-[9999]"
+            onClick={() => setIsPlay(false)}
+          >
+            <TfiClose className="absolute top-[1.5rem] right-[3rem] text-[2rem] cursor-pointer text-light" />
 
-          <video
-            src="/hero_video.mp4"
-            className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
-            controls
-            autoPlay
-          ></video>
-        </section>
-      )}
+            <video
+              src="/hero_video.mp4"
+              className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+              controls
+              autoPlay
+            ></video>
+          </section>,
+          document.body,
+        )}
     </section>
   );
 };
