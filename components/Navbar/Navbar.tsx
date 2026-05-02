@@ -250,7 +250,7 @@ const Navbar = () => {
       </section>
 
       {/* SUB NAVBAR */}
-      <section className="hidden 3xl:absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-15">
+      <section className="absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-15 4xl:opacity-100 opacity-0 4xl:pointer-events-auto pointer-events-none">
         <section className="flex flex-col">
           <Link href="/" className="hover:underline">
             Projects
