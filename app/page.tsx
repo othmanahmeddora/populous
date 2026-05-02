@@ -17,8 +17,8 @@ export default function Home() {
       <Explore />
       <Projects />
       <Sphere />
-      <Discipline />
-      <Vision />
+      {/* <Discipline />
+      <Vision /> */}
       <CTA />
     </div>
   );
