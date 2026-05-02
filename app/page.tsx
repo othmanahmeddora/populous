@@ -18,7 +18,7 @@ export default function Home() {
       <Projects />
       <Sphere />
       <Discipline />
-      {/* <Vision /> */}
+      <Vision />
       <CTA />
     </div>
   );
