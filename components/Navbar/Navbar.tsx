@@ -152,7 +152,7 @@ const Navbar = () => {
         {/* MENU */}
         <section
           ref={navMenu}
-          className="fixed top-[1.5rem] right-[1.5rem] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)] z-30 bg-light rounded-[.5rem] h-[95%] w-[50%]"
+          className="fixed 3xl:top-[1.5rem] top-[0] 3xl:right-[1.5rem] right-0 [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)] z-30 bg-light 2xl:rounded-[.5rem] rounded-0 3xl:h-[95%] h-[100%] 4xl:w-[50%] 3xl:w-[70%] w-[100%]"
         >
           <TfiClose
             onClick={() => setIsActive(false)}
@@ -160,8 +160,8 @@ const Navbar = () => {
           />
 
           <section className="flex flex-col items-start justify-between h-full p-[1rem]">
-            <section className="flex items-start justify-between w-full h-full">
-              <nav className="flex-1 flex flex-col gap-0 text-[3rem] leading-[3rem] h-full">
+            <section className="flex xl:flex-row flex-col-reverse items-start justify-between w-full h-full xl:mt-0 mt-[4rem]">
+              <nav className="xl:flex-1 flex flex-col gap-0 text-[3rem] leading-[3rem] h-full">
                 <div className="overflow-hidden h-[3.5rem]">
                   <Link
                     ref={(el) => {
@@ -199,7 +199,7 @@ const Navbar = () => {
                 </div>
               </nav>
 
-              <button className="flex-1 flex items-center gap-[.5rem]">
+              <button className="xl:flex-1 flex items-center gap-[.5rem]">
                 <span className="hover:underline font-[400]">Search</span>{" "}
                 <IoIosSearch className="w-[1rem]" />
               </button>
