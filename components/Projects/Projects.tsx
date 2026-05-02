@@ -4,11 +4,11 @@ import React from "react";
 
 const Projects = () => {
   return (
-    <section className="bg-light py-[10rem]">
-      <section className="max-w-[1600px] mx-auto px-[1rem] flex flex-col gap-[4rem]">
+    <section className="bg-light xl:py-[10rem] py-[5rem]">
+      <section className="max-w-[1600px] mx-auto px-[1rem] flex flex-col xl:gap-[4rem] gap-[2rem]">
         <Link
           href="/"
-          className="flex items-start justify-between gap-[1rem] group"
+          className="flex xl:flex-row flex-col items-start justify-between xl:gap-[1rem] gap-[2rem] group"
         >
           <h2 className="flex-1 text-[1.7rem]">Featured Projects</h2>
 
@@ -28,7 +28,10 @@ const Projects = () => {
           </section>
         </Link>
 
-        <Link href="/" className="flex items-start justify-between group">
+        <Link
+          href="/"
+          className="flex xl:flex-row flex-col items-start justify-between group"
+        >
           <section className="flex-1">
             <Image
               src="/img/10012.jpg"

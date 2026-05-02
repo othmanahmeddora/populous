@@ -14,7 +14,7 @@ const Footer = () => {
           POPULOUS
         </Link>
 
-        <section className="flex items-start justify-between">
+        <section className="lg:flex grid grid-cols-2 items-start justify-between gap-[2rem]">
           {footerLinks.map((footerLink) => (
             <section key={footerLink.id} className="flex-1">
               <h3 className="text-[.7rem] text-light-gray font-[500]">
@@ -36,13 +36,13 @@ const Footer = () => {
           ))}
         </section>
 
-        <section className="flex items-start justify-between">
+        <section className="flex lg:flex-row flex-col items-start justify-between">
           <section className="flex-1">
             <Link href="/" className="hover:underline">
               Privacy Policy
             </Link>
 
-            <p className="flex items-center gap-[.2rem] mt-[1rem]">
+            <p className="lg:flex hidden items-center gap-[.2rem] mt-[1rem]">
               Copyright <BiCopyright /> 2026 Populous
             </p>
           </section>
@@ -58,6 +58,10 @@ const Footer = () => {
           <Link href="/" className="flex-1 hover:underline">
             Manage Cookies
           </Link>
+
+          <p className="flex lg:hidden items-center gap-[.2rem] mt-[1rem]">
+            Copyright <BiCopyright /> 2026 Populous
+          </p>
         </section>
       </section>
     </footer>

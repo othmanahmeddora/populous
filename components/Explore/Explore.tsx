@@ -7,19 +7,21 @@ const Explore = () => {
     <section className="relative w-full">
       <video
         src="earth_video.mp4"
-        className="w-full brightness-75"
+        className="min-w-full brightness-75 min-h-screen object-cover"
         autoPlay
         loop
       ></video>
 
       <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[130vh] px-[1rem]">
-        <section className="sticky top-[20rem] flex items-start justify-between text-light w-full">
-          <p className="text-[2.25rem] max-w-[35rem]">
-            Explore some of our best work around the world
-          </p>
+        <section className="2xl:sticky top-[20rem] flex 2xl:flex-row flex-col 2xl:items-start items-center justify-between 2xl:gap-0 gap-[2rem] text-light w-full">
+          <section className="flex-1">
+            <p className="2xl:text-[2.25rem] text-[1.5rem] text-center 2xl:font-[400] font-[500] leading-[2rem] max-w-[30rem]">
+              Explore some of our best work around the world
+            </p>
+          </section>
 
-          <section className="flex flex-col items-start gap-[5rem]">
-            <p className="max-w-[22rem]">
+          <section className="flex-1 flex flex-col 2xl:items-start items-center justify-center 2xl:gap-[5rem] gap-[1rem] 2xl:ml-[40%]">
+            <p className="max-w-[22rem] 2xl:font-[400] font-[500] 2xl:text-left text-center">
               Discover how we transform ideas into reality, fostering
               connections that bridge cultures and celebrate the beauty of human
               interaction.

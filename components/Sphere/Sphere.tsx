@@ -11,12 +11,14 @@ const Sphere = () => {
         alt="sphere"
         width={500}
         height={500}
-        className="w-full brightness-75"
+        className="w-full brightness-60 min-h-screen object-cover"
       />
 
-      <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[130vh] px-[1rem]">
-        <section className="sticky top-[20rem] flex items-start justify-between text-light w-full">
-          <p className="text-[2.25rem] flex-1">Sphere</p>
+      <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[130vh]">
+        <section className="xl:sticky absolute top-[20rem] flex xl:flex-row flex-col xl:items-start items-center justify-between xl:gap-0 gap-[2rem] text-light w-full px-[1rem]">
+          <section className="flex-1 text-center">
+            <p className="text-[2.25rem] flex-1">Sphere</p>
+          </section>
 
           <section className="flex-1 flex items-center justify-center">
             <Link

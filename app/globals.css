@@ -10,7 +10,12 @@
 }
 
 @theme {
+<<<<<<< HEAD
   --breakpoint-3xl: 1022px;
+=======
+  --breakpoint-4xl: 1440px;
+  --breakpoint-3xl: 1024px;
+>>>>>>> main
   --breakpoint-2xl: 820px;
   --breakpoint-xl: 768px;
   --breakpoint-lg: 425px;

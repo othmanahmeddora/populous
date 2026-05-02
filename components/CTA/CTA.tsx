@@ -5,8 +5,8 @@ import { RiCornerDownRightLine } from "react-icons/ri";
 const CTA = () => {
   return (
     <section className="bg-light py-[10rem] px-[1rem]">
-      <section className="flex flex-col items-center justify-between gap-[5rem]">
-        <section className="text-center text-[5rem] tracking-tighter leading-[5.5rem]">
+      <section className="flex flex-col items-center justify-between xl:gap-[5rem] gap-[2rem]">
+        <section className="text-center xl:text-[5rem] text-[2rem] tracking-tighter xl:leading-[5.5rem] leading-[2.5rem]">
           <p>Have a question?</p>
 
           <p>Want to work with us?</p>

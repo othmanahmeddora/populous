@@ -102,6 +102,7 @@ const Navbar = () => {
   return (
     <nav className="relative">
       <section className="fixed top-[1rem] left-0 w-full z-15 mt-[1rem] px-[1rem] bg-transparent">
+        {/* MAIN NAVBAR */}
         <section>
           <section className="max-w-[1850px] mx-auto flex items-center justify-between">
             <section className="h-[2rem] overflow-hidden">
@@ -142,11 +143,13 @@ const Navbar = () => {
           </section>
         </section>
 
+        {/* OVERLAY FOR MENU */}
         <section
           ref={menuOverlay}
           className="fixed top-0 left-0 h-screen w-screen bg-black/50 opacity-0 z-10 pointer-events-none"
         ></section>
 
+        {/* MENU */}
         <section
           ref={navMenu}
           className="fixed top-[1.5rem] right-[1.5rem] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)] z-30 bg-light rounded-[.5rem] h-[95%] w-[50%]"
@@ -246,6 +249,7 @@ const Navbar = () => {
         </section>
       </section>
 
+      {/* SUB NAVBAR */}
       <section className="hidden 3xl:absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-15">
         <section className="flex flex-col">
           <Link href="/" className="hover:underline">
