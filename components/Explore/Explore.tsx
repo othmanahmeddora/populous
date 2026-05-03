@@ -12,7 +12,7 @@ const Explore = () => {
         loop
       ></video>
 
-      <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[130vh] px-[1rem]">
+      <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[105vh] px-[1rem]">
         <section className="2xl:sticky top-[20rem] flex 2xl:flex-row flex-col 2xl:items-start items-center justify-between 2xl:gap-0 gap-[2rem] text-light w-full">
           <section className="flex-1">
             <p className="2xl:text-[2.25rem] text-[1.5rem] text-center 2xl:font-[400] font-[500] leading-[2rem] max-w-[30rem]">

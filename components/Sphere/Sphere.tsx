@@ -14,7 +14,7 @@ const Sphere = () => {
         className="w-full brightness-60 min-h-screen object-cover"
       />
 
-      <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[130vh]">
+      <section className="absolute inset-0 max-w-[1600px] mx-auto pt-[20rem] pb-[10rem] min-h-[105vh]">
         <section className="xl:sticky absolute top-[20rem] flex xl:flex-row flex-col xl:items-start items-center justify-between xl:gap-0 gap-[2rem] text-light w-full px-[1rem]">
           <section className="flex-1 text-center">
             <p className="text-[2.25rem] flex-1">Sphere</p>
