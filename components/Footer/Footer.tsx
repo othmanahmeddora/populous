@@ -14,7 +14,7 @@ const Footer = () => {
           POPULOUS
         </Link>
 
-        <section className="lg:flex grid grid-cols-2 items-start justify-between gap-[2rem]">
+        <section className="xl:flex grid grid-cols-2 items-start justify-between gap-[2rem]">
           {footerLinks.map((footerLink) => (
             <section key={footerLink.id} className="flex-1">
               <h3 className="text-[.7rem] text-light-gray font-[500]">
