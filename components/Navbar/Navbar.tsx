@@ -45,7 +45,7 @@ const Navbar = () => {
         });
       }
 
-      setMenuPosition(window.scrollY >= window.innerHeight - 10);
+      setMenuPosition(window.scrollY >= window.innerHeight - 60);
 
       if (nearBottom !== wasBottom) {
         wasBottom = nearBottom;
