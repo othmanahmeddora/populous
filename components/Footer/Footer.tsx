@@ -36,7 +36,7 @@ const Footer = () => {
           ))}
         </section>
 
-        <section className="flex lg:flex-row flex-col items-start justify-between">
+        <section className="flex 2xl:flex-row flex-col items-start justify-between">
           <section className="flex-1">
             <Link href="/" className="hover:underline">
               Privacy Policy
