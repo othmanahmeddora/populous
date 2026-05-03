@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IoIosSearch } from "react-icons/io";
 import { TfiClose } from "react-icons/tfi";
 import Image from "next/image";
+import { subNavLinks } from "@/data/sub-navLinks";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -251,29 +252,15 @@ const Navbar = () => {
 
       {/* SUB NAVBAR */}
       <section className="absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-12 4xl:opacity-100 opacity-0 4xl:pointer-events-auto pointer-events-none">
-        <section className="flex flex-col">
-          <Link href="/" className="hover:underline">
-            Projects
-          </Link>
-          <Link href="/" className="hover:underline">
-            Explore
-          </Link>
-          <Link href="/" className="hover:underline">
-            Disciplines
-          </Link>
-        </section>
-
-        <section className="flex flex-col">
-          <Link href="/" className="hover:underline">
-            Sustainability
-          </Link>
-          <Link href="/" className="hover:underline">
-            Digital Future
-          </Link>
-          <Link href="/" className="hover:underline">
-            Careers
-          </Link>
-        </section>
+        {subNavLinks.map((subLink) => (
+          <section key={subLink.id} className="flex flex-col">
+            {subLink.links.map((link) => (
+              <Link key={link.id} href={link.link} className="hover:underline">
+                {link.title}
+              </Link>
+            ))}
+          </section>
+        ))}
 
         <button className="flex items-center gap-[.5rem]">
           <span className="hover:underline">Search</span>{" "}
