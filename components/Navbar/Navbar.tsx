@@ -15,7 +15,7 @@ import { subNavLinks } from "@/data/sub-navLinks";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = ({ mainNavColor = "light" }) => {
+const Navbar = ({ navColor = "light" }) => {
   const [isActive, setIsActive] = useState(false);
   const [menuPosition, setMenuPosition] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
@@ -113,7 +113,7 @@ const Navbar = ({ mainNavColor = "light" }) => {
               >
                 <Link
                   href="/"
-                  className={`text-${mainNavColor} text-[1.5rem] font-[500] tracking-[.08em] compress-text-height`}
+                  className={`text-${navColor} text-[1.5rem] font-[500] tracking-[.08em] compress-text-height`}
                 >
                   POPULOUS
                 </Link>
@@ -135,10 +135,10 @@ const Navbar = ({ mainNavColor = "light" }) => {
             >
               <span
                 ref={topBar}
-                className={`w-[2rem] h-[2px] block transition-colors duration-300 ${menuPosition ? "bg-dark" : "bg-" + mainNavColor}`}
+                className={`w-[2rem] h-[2px] block transition-colors duration-300 ${menuPosition ? "bg-dark" : "bg-" + navColor}`}
               ></span>
               <span
-                className={`w-[2rem] h-[2px] block group-hover:w-[1rem] transition-all ease-out duration-200 ${menuPosition ? "bg-dark" : "bg-" + mainNavColor}`}
+                className={`w-[2rem] h-[2px] block group-hover:w-[1rem] transition-all ease-out duration-200 ${menuPosition ? "bg-dark" : "bg-" + navColor}`}
               ></span>
             </button>
           </section>
@@ -251,7 +251,9 @@ const Navbar = ({ mainNavColor = "light" }) => {
       </section>
 
       {/* SUB NAVBAR */}
-      <section className="absolute top-[3rem] right-[10rem] text-light text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-12 4xl:opacity-100 opacity-0 4xl:pointer-events-auto pointer-events-none">
+      <section
+        className={`absolute top-[3rem] right-[10rem] text-${navColor} text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-12 4xl:opacity-100 opacity-0 4xl:pointer-events-auto pointer-events-none`}
+      >
         {subNavLinks.map((subLink) => (
           <section key={subLink.id} className="flex flex-col">
             {subLink.links.map((link) => (
