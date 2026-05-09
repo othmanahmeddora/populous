@@ -13,7 +13,7 @@ export const subNavLinks = [
         link: "/",
       },
       {
-        id: 1,
+        id: 3,
         title: "Discipline",
         link: "/",
       },
@@ -33,7 +33,7 @@ export const subNavLinks = [
         link: "/",
       },
       {
-        id: 1,
+        id: 3,
         title: "Careers",
         link: "/",
       },

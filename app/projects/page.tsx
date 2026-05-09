@@ -1,12 +1,20 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 import Navbar from "@/components/Navbar/Navbar";
 
 import { FaCaretUp } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
 import CTA from "@/components/CTA/CTA";
+import { projects } from "@/data/projects";
+import Image from "next/image";
 
 const page = () => {
+  const [activeProject, setActiveProject] = useState(projects[0]);
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <section className="bg-light">
       <Navbar navColor="dark" />
@@ -63,15 +71,51 @@ const page = () => {
             </button>
           </section>
         </section>
-
-        <section className="flex flex-col py-[5rem]">
-          <section className="flex items-center justify-between pl-[.9rem]">
-            <p className="flex-2">dummy title</p>
-            <p className="flex-1">dummy location</p>
-            <p className="flex-1">dummy date</p>
-          </section>
-        </section>
       </section>
+
+      <div className="relative">
+        {/* Projects list */}
+        <div>
+          {projects.map((project, index) => (
+            <section
+              key={project.id}
+              onMouseEnter={() => {
+                setActiveProject(project);
+                setIsHovering(true);
+              }}
+              onMouseLeave={() => setIsHovering(false)}
+              className="hover:bg-gray-300 transition-all duration-700 ease-out"
+            >
+              <section
+                className={`max-w-[1600px] mx-auto flex flex-col ${index === 0 ? "mt-[5rem]" : ""}`}
+              >
+                <section className="flex items-center justify-between pl-[.9rem]">
+                  <p className="flex-2">{project.title}</p>
+                  <p className="flex-1">{project.location}</p>
+                  <p className="flex-1">{project.date}</p>
+                </section>
+              </section>
+            </section>
+          ))}
+        </div>
+
+        {/* Sticky image column */}
+        <div className="absolute top-0 right-[2rem] w-[400px] h-full pointer-events-none flex flex-col justify-end">
+          <div className="sticky bottom-[2rem]">
+            <Image
+              src={activeProject.image}
+              alt={activeProject.title}
+              width={500}
+              height={500}
+              className={`transition-[clip-path] duration-700 ease-out ${
+                isHovering
+                  ? "[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]"
+                  : "[clip-path:polygon(0%_100%,100%_100%,100%_100%,0%_100%)]"
+              }`}
+            />
+          </div>
+        </div>
+      </div>
 
       <CTA />
     </section>
