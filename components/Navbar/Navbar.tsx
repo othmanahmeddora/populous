@@ -15,7 +15,7 @@ import { subNavLinks } from "@/data/sub-navLinks";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = () => {
+const Navbar = ({ mainNavColor = "light" }) => {
   const [isActive, setIsActive] = useState(false);
   const [menuPosition, setMenuPosition] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
@@ -113,7 +113,7 @@ const Navbar = () => {
               >
                 <Link
                   href="/"
-                  className="text-light text-[1.5rem] font-[500] tracking-[.08em] compress-text-height"
+                  className={`text-${mainNavColor} text-[1.5rem] font-[500] tracking-[.08em] compress-text-height`}
                 >
                   POPULOUS
                 </Link>
@@ -135,10 +135,10 @@ const Navbar = () => {
             >
               <span
                 ref={topBar}
-                className={`w-[2rem] h-[2px] block transition-colors duration-300 ${menuPosition ? "bg-dark" : "bg-light"}`}
+                className={`w-[2rem] h-[2px] block transition-colors duration-300 ${menuPosition ? "bg-dark" : "bg-" + mainNavColor}`}
               ></span>
               <span
-                className={`w-[2rem] h-[2px] block group-hover:w-[1rem] transition-all ease-out duration-200 ${menuPosition ? "bg-dark" : "bg-light"}`}
+                className={`w-[2rem] h-[2px] block group-hover:w-[1rem] transition-all ease-out duration-200 ${menuPosition ? "bg-dark" : "bg-" + mainNavColor}`}
               ></span>
             </button>
           </section>
