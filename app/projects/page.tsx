@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 
 import { FaCaretUp } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
+import CTA from "@/components/CTA/CTA";
 
 const page = () => {
   return (
@@ -13,12 +14,12 @@ const page = () => {
       <section className="max-w-[1600px] mx-auto">
         <section className="flex flex-col">
           <section className="flex items-end justify-between pt-[15rem] pb-[5rem]">
-            <p className="flex-2 relative text-[8.75rem] tracking-tighter">
+            <h1 className="flex-2 relative text-[8.75rem] tracking-tighter">
               Projects{" "}
               <span className="absolute text-[1rem] top-[5rem] right-[20rem] font-medium tracking-normal">
                 (288)
               </span>
-            </p>
+            </h1>
 
             <section className="flex-1">
               <Link href="" className="w-fit text-light-gray text-[1.7rem]">
@@ -63,8 +64,16 @@ const page = () => {
           </section>
         </section>
 
-        <section className="flex flex-col"></section>
+        <section className="flex flex-col py-[5rem]">
+          <section className="flex items-center justify-between pl-[.9rem]">
+            <p className="flex-2">dummy title</p>
+            <p className="flex-1">dummy location</p>
+            <p className="flex-1">dummy date</p>
+          </section>
+        </section>
       </section>
+
+      <CTA />
     </section>
   );
 };
