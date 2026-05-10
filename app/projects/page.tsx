@@ -207,6 +207,7 @@ const Page = () => {
                     alt={project.title}
                     width={500}
                     height={500}
+                    className="aspect-[16/9]"
                   />
                 </div>
               ))}
