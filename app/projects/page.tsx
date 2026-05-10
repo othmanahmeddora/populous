@@ -17,14 +17,21 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Page = () => {
-  const [activeProject, setActiveProject] = useState(projects[0]);
-  const [isHovering, setIsHovering] = useState(false);
-
   const projectsHeader = useRef(null);
   const projectsCounter = useRef(null);
+  const projectRefs = useRef<HTMLElement[]>([]);
+  const imageRefs = useRef<HTMLDivElement[]>([]);
 
   useGSAP(() => {
     ScrollTrigger.refresh();
+
+    imageRefs.current.forEach((image) => {
+      gsap.set(image, {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+        scale: 1,
+        opacity: 1,
+      });
+    });
 
     gsap.to(projectsHeader.current, {
       fontSize: "1.7rem",
@@ -46,6 +53,49 @@ const Page = () => {
       },
     });
   }, []);
+
+  const handleBGEnterAnimation = (index: number) => {
+    gsap.to(projectRefs.current[index], {
+      backgroundColor: "#E0DDDD",
+      duration: 0,
+      ease: "power3.inOut",
+    });
+  };
+
+  const handleBGLeaveAnimation = (index: number) => {
+    gsap.to(projectRefs.current[index], {
+      backgroundColor: "#fff",
+      duration: 0.2,
+      ease: "power3.inOut",
+    });
+  };
+
+  const handleImgEnterAnimation = (index: number) => {
+    gsap.to(imageRefs.current[index], {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      scale: 1,
+      opacity: 1,
+      duration: 0.8,
+      ease: "power3.inOut",
+    });
+  };
+
+  const handleImgLeaveAnimation = (index: number) => {
+    gsap.to(imageRefs.current[index], {
+      scale: 0.75,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.inOut",
+      onComplete: () => {
+        gsap.set(imageRefs.current[index], {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+          opacity: 1,
+          scale: 1,
+        });
+      },
+    });
+  };
+
   return (
     <section className="bg-light">
       <Navbar navColor="dark" />
@@ -116,12 +166,18 @@ const Page = () => {
             {projects.map((project, index) => (
               <section
                 key={project.id}
-                onMouseEnter={() => {
-                  setActiveProject(project);
-                  setIsHovering(true);
+                ref={(el) => {
+                  projectRefs.current[index] = el!;
                 }}
-                onMouseLeave={() => setIsHovering(false)}
-                className="hover:bg-gray-300 transition-all duration-700 ease-out"
+                onMouseEnter={() => {
+                  handleBGEnterAnimation(index);
+                  handleImgEnterAnimation(index);
+                }}
+                onMouseLeave={() => {
+                  handleBGLeaveAnimation(index);
+                  handleImgLeaveAnimation(index);
+                }}
+                className="cursor-pointer"
               >
                 <section
                   className={`max-w-[1600px] mx-auto flex flex-col ${index === 0 ? "mt-[5rem]" : ""}`}
@@ -136,19 +192,24 @@ const Page = () => {
             ))}
           </section>
 
-          <section className="absolute top-0 right-[2rem] w-[400px] h-full pointer-events-none flex flex-col justify-end">
+          <section className="absolute top-0 right-[2rem] w-[400px] h-full flex flex-col justify-end">
             <section className="sticky bottom-[2rem]">
-              <Image
-                src={activeProject.image}
-                alt={activeProject.title}
-                width={500}
-                height={500}
-                className={`transition-[clip-path] duration-700 ease-out ${
-                  isHovering
-                    ? "[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)]"
-                    : "[clip-path:polygon(0%_100%,100%_100%,100%_100%,0%_100%)]"
-                }`}
-              />
+              {projects.map((project, index) => (
+                <div
+                  key={project.id}
+                  ref={(el) => {
+                    imageRefs.current[index] = el!;
+                  }}
+                  className={index !== 0 ? "absolute top-0 left-0" : ""}
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={500}
+                    height={500}
+                  />
+                </div>
+              ))}
             </section>
           </section>
         </section>
