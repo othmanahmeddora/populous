@@ -100,13 +100,13 @@ const Page = () => {
     <section className="bg-light">
       <Navbar navColor="dark" />
 
-      <section className="pt-[15rem]">
-        <section className="sticky top-0 h-full bg-light/60 backdrop-blur-sm z-10">
-          <section className="flex flex-col max-w-[1600px] mx-auto pt-[2.5rem]">
-            <section className="flex items-end justify-between pb-[5rem]">
+      <section className="xl:pt-[15rem] pt-[10rem] px-[1rem]">
+        <section className="xl:sticky top-0 h-full bg-light/60 backdrop-blur-sm z-10">
+          <section className="flex flex-col max-w-[1600px] mx-auto xl:pt-[2.5rem]">
+            <section className="flex items-end justify-between xl:pb-[5rem] pb-[1rem]">
               <h1
                 ref={projectsHeader}
-                className="flex-2 relative text-[8.75rem] tracking-tighter"
+                className="flex-2 relative xl:text-[8.75rem] text-[1.7rem] tracking-tighter"
               >
                 Projects{" "}
                 {/* <span
@@ -117,7 +117,7 @@ const Page = () => {
                 </span> */}
               </h1>
 
-              <section className="flex-1">
+              {/* <section className="flex-1">
                 <Link href="" className="w-fit text-light-gray text-[1.7rem]">
                   <p className="hover:text-dark transition-all duration-200 ease-out">
                     Collections
@@ -130,10 +130,10 @@ const Page = () => {
                 <span className="absolute text-[1rem] top-0 right-[-1.5rem] font-medium tracking-normal">
                   (0)
                 </span>
-              </p>
+              </p> */}
             </section>
 
-            <section className="flex items-center justify-between">
+            <section className="xl:flex hidden items-center justify-between">
               <button className="flex-2 flex items-center gap-[.15rem] text-[.625rem] uppercase font-medium px-[.9rem] py-[.3rem] rounded-full">
                 Name{" "}
                 <span className="flex flex-col items-center justify-content-center">
@@ -182,10 +182,18 @@ const Page = () => {
                 <section
                   className={`max-w-[1600px] mx-auto flex flex-col ${index === 0 ? "mt-[5rem]" : ""}`}
                 >
-                  <section className="flex items-center justify-between pl-[.9rem]">
-                    <p className="flex-2">{project.title}</p>
-                    <p className="flex-1">{project.location}</p>
-                    <p className="flex-1">{project.date}</p>
+                  <section className="flex items-start justify-between pl-[.9rem] xl:font-[500] font-[400] border-t border-t-light-gray pt-[.5rem] leading-[2rem]">
+                    <section className="flex-[3] flex xl:flex-row flex-col-reverse">
+                      <p className="flex-2 xl:text-[1rem] text-[1.35rem] xl:mb-0 mb-[1rem]">
+                        {project.title}
+                      </p>
+                      <p className="flex-1 xl:text-[1rem] text-[.8rem]">
+                        {project.location}
+                      </p>
+                    </section>
+                    <p className="flex-1 text-right xl:text-left">
+                      {project.date}
+                    </p>
                   </section>
                 </section>
               </section>
