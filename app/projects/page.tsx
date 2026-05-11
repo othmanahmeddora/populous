@@ -182,16 +182,16 @@ const Page = () => {
                 <section
                   className={`max-w-[1600px] mx-auto flex flex-col ${index === 0 ? "mt-[5rem]" : ""}`}
                 >
-                  <section className="flex items-start justify-between pl-[.9rem] xl:font-[500] font-[400] border-t border-t-light-gray pt-[.5rem] leading-[2rem]">
-                    <section className="flex-[3] flex xl:flex-row flex-col-reverse">
-                      <p className="flex-2 xl:text-[1rem] text-[1.35rem] xl:mb-0 mb-[1rem]">
+                  <section className="flex items-start justify-between pl-[.9rem] xl:font-[500] font-[400] xl:border-t-0 border-t border-t-light-gray pt-[.5rem] xl:leading-[1rem] leading-[2rem]">
+                    <section className="flex-[3] flex xl:flex-row flex-col-reverse min-w-0">
+                      <p className="flex-2 xl:text-[1rem] text-[1.35rem] xl:mb-0 mb-[1rem] truncate">
                         {project.title}
                       </p>
-                      <p className="flex-1 xl:text-[1rem] text-[.8rem]">
+                      <p className="flex-1 xl:text-[1rem] text-[.8rem] truncate ml-[1rem]">
                         {project.location}
                       </p>
                     </section>
-                    <p className="flex-1 text-right xl:text-left">
+                    <p className="flex-1 text-right xl:text-left truncate ml-[1rem]">
                       {project.date}
                     </p>
                   </section>
