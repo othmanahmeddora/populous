@@ -5,7 +5,7 @@ export const subNavLinks = [
       {
         id: 1,
         title: "Projects",
-        link: "/",
+        link: "/projects",
       },
       {
         id: 2,

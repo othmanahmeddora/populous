@@ -180,7 +180,7 @@ const Navbar = ({ navColor = "light" }) => {
                     ref={(el) => {
                       bigNavLinks.current[1] = el;
                     }}
-                    href="/"
+                    href="/projects"
                     className="hover:underline w-fit block"
                   >
                     Projects
@@ -252,12 +252,16 @@ const Navbar = ({ navColor = "light" }) => {
 
       {/* SUB NAVBAR */}
       <section
-        className={`absolute top-[3rem] right-[10rem] text-${navColor} text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-12 4xl:opacity-100 opacity-0 4xl:pointer-events-auto pointer-events-none`}
+        className={`absolute top-[3rem] right-[10rem] text-${navColor} text-[1rem] font-[500] 3xl:flex items-start gap-[17rem] z-15 4xl:opacity-100 opacity-0 4xl:pointer-events-auto pointer-events-none`}
       >
         {subNavLinks.map((subLink) => (
           <section key={subLink.id} className="flex flex-col">
             {subLink.links.map((link) => (
-              <Link key={link.id} href={link.link} className="hover:underline">
+              <Link
+                key={link.id}
+                href={link.link}
+                className="hover:underline cursor-pointer"
+              >
                 {link.title}
               </Link>
             ))}
