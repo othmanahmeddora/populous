@@ -11,7 +11,7 @@ export const footerLinks = [
       {
         id: 2,
         title: "Projects",
-        link: "/",
+        link: "/projects",
       },
       {
         id: 3,
@@ -74,22 +74,22 @@ export const footerLinks = [
       {
         id: 1,
         title: "LinkedIn",
-        link: "/",
+        link: "https://www.linkedin.com/company/populous/",
       },
       {
         id: 2,
         title: "Facebook",
-        link: "/",
+        link: "https://www.facebook.com/Populous",
       },
       {
         id: 3,
         title: "Instagram",
-        link: "/",
+        link: "https://www.instagram.com/wearepopulous/",
       },
       {
         id: 4,
         title: "X",
-        link: "/",
+        link: "https://x.com/Populous",
       },
     ],
   },
