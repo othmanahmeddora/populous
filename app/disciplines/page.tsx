@@ -15,6 +15,7 @@ import {
   RiArrowRightLongLine,
   RiCornerDownRightLine,
 } from "react-icons/ri";
+import CTA from "@/components/CTA/CTA";
 
 const Disciplines = () => {
   const imageRefs = useRef<HTMLDivElement[]>([]);
@@ -70,7 +71,7 @@ const Disciplines = () => {
     <section>
       <Navbar navColor="dark" />
 
-      <section className="flex flex-col gap-[10rem] max-w-[1600px] mx-auto xl:pt-[15rem] px-[1rem]">
+      <section className="flex flex-col xl:gap-[10rem] gap-[5rem] max-w-[1600px] mx-auto xl:pt-[15rem] pt-[10rem] px-[1rem]">
         <h1 className="flex-2 relative xl:text-[8.75rem] text-[1.7rem] tracking-tighter">
           Disciplines
         </h1>
@@ -83,13 +84,13 @@ const Disciplines = () => {
                 href={discipline.link}
                 onMouseEnter={() => handleImgEnterAnimation(index)}
                 onMouseLeave={() => handleImgLeaveAnimation(index)}
-                className="relative flex items-start justify-between md:gap-[1rem] leading-[4rem] tracking-tighter mb-[1rem] group"
+                className="relative flex items-start justify-between md:gap-[1rem] xl:leading-[4rem] leading-[1.5rem] tracking-tighter mb-[1rem] group"
               >
                 <p className="group-hover:text-theme transition-all ease-out duration-200">
                   {discipline.title}
                 </p>
 
-                <div className="xl:absolute top-[60%] xl:translate-y-[-50%] left-[-4%] text-[3.5rem] overflow-hidden w-fit">
+                <div className="xl:absolute top-[60%] xl:translate-y-[-50%] left-[-4%] xl:text-[3.5rem] text-[1rem] overflow-hidden w-fit">
                   <FaArrowRight className="xl:translate-x-[-100%] group-hover:translate-x-[0] group-hover:text-theme transition-all ease-out duration-200" />
                 </div>
               </Link>
@@ -119,7 +120,7 @@ const Disciplines = () => {
           </section>
         </section>
 
-        <section className="pb-[10rem]">
+        <section>
           <h1 className="flex-2 relative text-[2.25rem] tracking-tighter mb-[2rem]">
             Our Companies
           </h1>
@@ -141,9 +142,9 @@ const Disciplines = () => {
               </button>
 
               <section
-                className={`flex flex-col xl:flex-row items-start justify-between transition-all duration-300 ease-in-out ${open.has(i) ? "max-h-[100vh]" : "max-h-0"}`}
+                className={`flex flex-col 2xl:flex-row items-start justify-between transition-all duration-300 ease-in-out ${open.has(i) ? "max-h-[100vh]" : "max-h-0"}`}
               >
-                <section className="flex-1">
+                <section className="flex-1 xl:flex 2xl:flex-col flex-row justify-between w-full">
                   <p className="pb-[1rem] pt-[.5rem] max-w-[30rem] flex flex-col items-start gap-[1rem]">
                     {item.texts.map((item) => (
                       <p key={item.id}>{item.text}</p>
@@ -155,7 +156,7 @@ const Disciplines = () => {
                     alt={item.title}
                     width={500}
                     height={250}
-                    className="w-[12rem] py-[.5rem]"
+                    className="max-w-[12rem] h-full py-[.5rem]"
                   />
                 </section>
 
@@ -172,7 +173,7 @@ const Disciplines = () => {
                     />
                   ))}
 
-                  <section className="absolute bottom-[.5rem] left-[.5rem] flex items-center xl:justify-start justify-between w-full xl:ga gap-[1rem]">
+                  <section className="absolute bottom-[.5rem] left-[.5rem] flex md:flex-row flex-col items-start xl:justify-start justify-between w-full xl:ga gap-[1rem]">
                     <section className="flex items-center gap-[1rem]">
                       <button
                         className={`p-[.5rem] rounded-[.2rem] ${slider === 0 ? "bg-light/40" : "hover:bg-theme hover:text-light bg-l"}`}
@@ -204,10 +205,10 @@ const Disciplines = () => {
                     <Link
                       href={item.logoLink}
                       target="_blank"
-                      className="flex items-center gap-[1rem] px-[.5rem] py-[.45rem] text-[.8rem] font-[500] bg-light hover:bg-theme hover:text-white rounded-[.2rem]"
+                      className="flex items-center gap-[1rem] px-[.5rem] mr-[1rem] py-[.45rem] text-[.8rem] font-[500] bg-light hover:bg-theme hover:text-white rounded-[.2rem]"
                     >
                       <RiCornerDownRightLine className="text-[1rem]" />
-                      Fentress Studios Website
+                      {item.title}
                     </Link>
                   </section>
                 </section>
@@ -216,6 +217,8 @@ const Disciplines = () => {
           ))}
         </section>
       </section>
+
+      <CTA />
     </section>
   );
 };
