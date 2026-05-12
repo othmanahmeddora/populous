@@ -193,7 +193,7 @@ const Navbar = ({ navColor = "light" }) => {
                   ref={(el) => {
                     bigNavLinks.current[2] = el;
                   }}
-                  href="/"
+                  href="/disciplines"
                   className="hover:underline w-fit block"
                 >
                   Disciplines

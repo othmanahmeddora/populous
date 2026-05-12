@@ -15,7 +15,7 @@ export const subNavLinks = [
       {
         id: 3,
         title: "Discipline",
-        link: "/",
+        link: "/disciplines",
       },
     ],
   },
