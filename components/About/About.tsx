@@ -24,7 +24,7 @@ const About = () => {
         >
           <section className="relative overflow-hidden">
             <video
-              src="/hero_video.mp4"
+              src="/videos/hero_video.mp4"
               className="w-[25rem] brightness-75 group-hover:scale-105 group-hover:brightness-100 transition-all ease-out duration-200"
             ></video>
 

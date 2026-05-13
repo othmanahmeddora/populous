@@ -6,7 +6,7 @@ const Explore = () => {
   return (
     <section className="relative w-full">
       <video
-        src="earth_video.mp4"
+        src="/videos/earth_video.mp4"
         className="min-w-full brightness-75 min-h-screen object-cover"
         autoPlay
         loop
