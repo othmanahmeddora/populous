@@ -11,35 +11,31 @@ const Sustainability = () => {
     <section>
       <Navbar />
 
-      <section className="flex flex-col gap-[10rem]">
+      <section className="flex flex-col xl:gap-[10rem] gap-[5rem]">
         <section className="relative bg-[url(/img/10014.jpg)] bg-cover before:absolute before:inset-0 before:bg-black/35">
           <section className="relative z-10 max-w-[1600px] px-[1rem] mx-auto pt-[25rem] pb-[2rem] flex flex-col justify-between gap-[10rem] xl:gap-[30rem]">
             <h1
-              className="text-center text-light xl:text-[8.75rem] text-[4.5rem] tracking-tighter xl:leading-[9rem] leading-[4.5rem] mb-[20rem] xl:mb-0"
+              className="text-center text-light xl:text-[8.75rem] text-[4rem] tracking-tighter xl:leading-[9rem] leading-[4.5rem] mb-[20rem] xl:mb-0"
               data-scroll
               data-scroll-speed={0.1}
             >
               Creating a Sustainable Future
             </h1>
 
-            <section className="flex items-start justify-between w-full">
+            <section className="flex items-start w-full">
               <p
-                className="xl:flex-1 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
+                className="w-full xl:w-1/2 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
                 data-scroll
                 data-scroll-speed={0.1}
               >
                 Every day, our work at Populous tells the world a story about
                 who we are and what we believe.
               </p>
-
-              <section className="flex-1"></section>
             </section>
 
-            <section className="flex items-start justify-between w-full">
-              <section className="flex-1"></section>
-
+            <section className="flex items-start justify-end w-full">
               <p
-                className="xl:flex-1 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
+                className="w-full xl:w-1/2 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
                 data-scroll
                 data-scroll-speed={0.05}
               >
@@ -271,9 +267,9 @@ const Sustainability = () => {
           </p>
 
           <section>
-            <section className="flex flex-col xl:flex-row items-start justify-between w-full border-t pt-[1rem] pb-[5rem]">
+            <section className="flex flex-col xl:flex-row items-start justify-between w-full border-t xl:pt-[1rem] xl:pb-[5rem] pb-[2rem]">
               <section className="flex-1">
-                <h3 className="text-[8.75rem] text-theme leading-[5rem] max-w-[18rem]">
+                <h3 className="xl:text-[8.75rem] text-[5rem] text-theme xl:leading-[5rem] leading-[5rem] max-w-[18rem] mb-[2rem] xl:mb-0">
                   1
                 </h3>
               </section>
@@ -285,9 +281,9 @@ const Sustainability = () => {
               </section>
             </section>
 
-            <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem] pb-[5rem]">
+            <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem] xl:pb-[5rem] pb-[2rem]">
               <section className="flex-1">
-                <h3 className="text-[8.75rem] text-theme leading-[5rem] max-w-[18rem]">
+                <h3 className="xl:text-[8.75rem] text-[5rem] text-theme xl:leading-[5rem] leading-[5rem] max-w-[18rem] mb-[2rem] xl:mb-0">
                   2
                 </h3>
               </section>
@@ -300,9 +296,9 @@ const Sustainability = () => {
               </section>
             </section>
 
-            <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem] pb-[5rem]">
+            <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem] xl:pb-[5rem] pb-[2rem]">
               <section className="flex-1">
-                <h3 className="text-[8.75rem] text-theme leading-[5rem] max-w-[18rem]">
+                <h3 className="xl:text-[8.75rem] text-[5rem] text-theme xl:leading-[5rem] leading-[5rem] max-w-[18rem] mb-[2rem] xl:mb-0">
                   3
                 </h3>
               </section>
@@ -317,8 +313,9 @@ const Sustainability = () => {
           </section>
 
           <section className="flex items-start justify-between">
-            <section className="flex-1"></section>
-            <section className="flex-1">
+            <section className="xl:flex-1"></section>
+
+            <section className="xl:flex-1">
               <p className="text-[1.7rem] leading-[2rem] max-w-[29.5rem]">
                 Populous is a signatory to Architects Declare Australia,
                 Architects Declare UK, and the AIA 2030 Commitment. In the UK,
