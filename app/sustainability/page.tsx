@@ -258,7 +258,7 @@ const Sustainability = () => {
         </section>
 
         {/* Road Map */}
-        <section className="max-w-[1600px] mx-auto w-full px-[1rem] z-10">
+        <section className="max-w-[1600px] mx-auto w-full px-[1rem] z-10 flex flex-col gap-[10rem]">
           <p className="text-[2rem] text-left w-[32rem] tracking-tighter leading-[2.25rem]">
             Our Road Map: We are now tracking our firm’s ‘global’ operational
             emissions (scopes 1, 2, and select scope 3*) annually. The primary
@@ -267,6 +267,71 @@ const Sustainability = () => {
             offsets each year accordingly. By 2030, we will expand GHG emissions
             tracking to account for all applicable scope 3 emissions.
           </p>
+
+          <section>
+            <section className="flex flex-col xl:flex-row items-start justify-between w-full border-t pt-[1rem] pb-[5rem]">
+              <section className="flex-1">
+                <h3 className="text-[8.75rem] text-theme leading-[5rem] max-w-[18rem]">
+                  1
+                </h3>
+              </section>
+
+              <section className="flex-1">
+                <p className="max-w-[20rem] leading-[1.4rem] text-[1.25rem]">
+                  Direct emissions owned or controlled by Populous
+                </p>
+              </section>
+            </section>
+
+            <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem] pb-[5rem]">
+              <section className="flex-1">
+                <h3 className="text-[8.75rem] text-theme leading-[5rem] max-w-[18rem]">
+                  2
+                </h3>
+              </section>
+
+              <section className="flex-1">
+                <p className="max-w-[20rem] leading-[1.4rem] text-[1.25rem]">
+                  Indirect emissions from purchased electricity to operate our
+                  offices
+                </p>
+              </section>
+            </section>
+
+            <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem] pb-[5rem]">
+              <section className="flex-1">
+                <h3 className="text-[8.75rem] text-theme leading-[5rem] max-w-[18rem]">
+                  3
+                </h3>
+              </section>
+
+              <section className="flex-1">
+                <p className="max-w-[20rem] leading-[1.4rem] text-[1.25rem]">
+                  Indirect emissions that occur in the value chain of our
+                  company
+                </p>
+              </section>
+            </section>
+          </section>
+
+          <section className="flex items-start justify-between">
+            <section className="flex-1"></section>
+            <section className="flex-1">
+              <p className="text-[1.7rem] leading-[2rem] max-w-[29.5rem]">
+                Populous is a signatory to Architects Declare Australia,
+                Architects Declare UK, and the AIA 2030 Commitment. In the UK,
+                we are a member of the British Association for Sustainability in
+                Sport (BASIS). Our EMEA region and Australian offices have
+                achieved ISO 14001 certification. Additionally, our Australian
+                offices’ operations are Climate Active carbon-neutral certified
+                and have committed to a carbon reduction strategy, which has a
+                target of 75% reduction by 2030 (scopes 1, 2 and 3). We will
+                continue to adapt our workflows and educate our staff so the
+                decisions we make are informed and help mitigate the realities
+                of climate change.
+              </p>
+            </section>
+          </section>
         </section>
       </section>
     </section>
