@@ -223,7 +223,7 @@ const Sustainability = () => {
         </section>
 
         {/* Leading by Example */}
-        <section className="max-w-[1600px] mx-auto w-full">
+        <section className="max-w-[1600px] mx-auto w-full px-[1rem]">
           <section className=" flex xl:flex-row flex-col items-start justify-between gap-[1rem]">
             <Image
               src="/img/10015.webp"
