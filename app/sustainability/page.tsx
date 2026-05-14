@@ -136,7 +136,7 @@ const Sustainability = () => {
         </section>
 
         {/* Commitment */}
-        <section className="xl:px-[2rem]">
+        <section className="2xl:px-[1rem]">
           <section className="rounded-[1rem] bg-theme">
             <section className="max-w-[1600px] mx-auto text-light">
               <section className="w-full flex items-center justify-center xl:pt-[2rem] pt-[5rem] xl:pb-[5rem] pb-[2rem]">
