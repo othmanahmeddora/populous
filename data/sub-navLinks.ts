@@ -25,7 +25,7 @@ export const subNavLinks = [
       {
         id: 1,
         title: "Sustainability",
-        link: "/",
+        link: "/sustainability",
       },
       {
         id: 2,

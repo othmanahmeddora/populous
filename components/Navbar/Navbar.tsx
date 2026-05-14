@@ -232,7 +232,7 @@ const Navbar = ({ navColor = "light" }) => {
               </section>
 
               <nav className="flex-1 flex flex-col font-[500] leading-[1.4rem]">
-                <Link className="hover:underline" href="/">
+                <Link className="hover:underline" href="/sustainability">
                   Sustainability
                 </Link>
                 <Link className="hover:underline" href="/">
