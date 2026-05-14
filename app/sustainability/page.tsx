@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { RiCornerDownRightLine } from "react-icons/ri";
+import NewsPerspective from "@/components/NewsPerspective/NewsPerspective";
+import CTA from "@/components/CTA/CTA";
 
 const Sustainability = () => {
   return (
@@ -334,6 +336,10 @@ const Sustainability = () => {
           </section>
         </section>
       </section>
+
+      <NewsPerspective />
+
+      <CTA />
     </section>
   );
 };
