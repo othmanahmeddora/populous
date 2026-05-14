@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className="sticky top-0 h-screen w-full z-[-1] px-[1rem] overflow-hidden">
       <video
-        src="/hero_video.mp4"
+        src="/videos/hero_video.mp4"
         className="absolute top-0 left-0 h-full w-full object-cover brightness-50"
         autoPlay
         muted
