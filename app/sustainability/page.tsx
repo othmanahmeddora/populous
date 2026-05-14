@@ -64,7 +64,7 @@ const Sustainability = () => {
         {/* Video */}
         <section className="max-w-[1600px] mx-auto px-[1rem]">
           <video
-            src="/videos/sustainable-design.mp4"
+            src="/videos/hero_video.mp4"
             className="rounded-[.6rem]"
             controls
           ></video>
