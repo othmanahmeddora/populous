@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { RiCornerDownRightLine } from "react-icons/ri";
 
 const Sustainability = () => {
   return (
@@ -160,7 +161,7 @@ const Sustainability = () => {
                   </section>
                 </section>
 
-                <section className="flex flex-col xl:flex-row items-start justify-between w-full border-t">
+                <section className="flex flex-col xl:flex-row items-start justify-between w-full border-t pt-[1rem]">
                   <section className="flex-1">
                     <h3 className="text-[1.325rem] max-w-[18rem] leading-[1.8rem] tracking-tighter">
                       Zero Carbon Certification for Climate Pledge Arena
@@ -178,7 +179,7 @@ const Sustainability = () => {
                   </section>
                 </section>
 
-                <section className="flex flex-col xl:flex-row items-start justify-between border-t">
+                <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem]">
                   <section className="flex-1">
                     <h3 className="text-[1.325rem] max-w-[18rem] leading-[1.8rem] tracking-tighter">
                       Environmental Impact Measurement and Tracking
@@ -197,7 +198,7 @@ const Sustainability = () => {
                   </section>
                 </section>
 
-                <section className="flex flex-col xl:flex-row items-start justify-between border-t">
+                <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem]">
                   <section className="flex-1">
                     <h3 className="text-[1.325rem] max-w-[18rem] leading-[1.8rem] tracking-tighter">
                       Utilizing Recognized Frameworks
@@ -217,6 +218,55 @@ const Sustainability = () => {
               </section>
             </section>
           </section>
+        </section>
+
+        {/* Leading by Example */}
+        <section className="max-w-[1600px] mx-auto w-full">
+          <section className=" flex xl:flex-row flex-col items-start justify-between gap-[1rem]">
+            <Image
+              src="/img/10015.webp"
+              alt="Populous project"
+              width={500}
+              height={500}
+              className="flex-1 rounded-[.2rem]"
+            />
+
+            <section className="relative flex-1">
+              <h2 className="text-[2.25rem] leading-[2.5rem] font-[400] 2xl:mb-0 mb-[1rem]">
+                Leading by <br /> Example
+              </h2>
+
+              <section className="2xl:absolute top-[500%] left-[50%]">
+                <p className="max-w-[18rem] mb-[1rem] leading-[1.4rem]">
+                  Sustainability at Populous means ensuring we lead by example.
+                  We strive to operate our offices in an environmentally
+                  responsible way and have been awarded Climate Active
+                  Certification in recognition of achieving carbon neutrality in
+                  the operations of our Brisbane, Sydney, and Melbourne offices.
+                </p>
+
+                <Link
+                  href="/"
+                  className="w-fit flex items-center gap-[1rem] px-[.5rem] py-[.5rem] text-[.8rem] font-[500] bg-dark text-light hover:bg-theme hover:text-white rounded-[.2rem]"
+                >
+                  <RiCornerDownRightLine className="text-[1rem]" />
+                  Read the article
+                </Link>
+              </section>
+            </section>
+          </section>
+        </section>
+
+        {/* Road Map */}
+        <section className="max-w-[1600px] mx-auto w-full px-[1rem] z-10">
+          <p className="text-[2rem] text-left w-[32rem] tracking-tighter leading-[2.25rem]">
+            Our Road Map: We are now tracking our firm’s ‘global’ operational
+            emissions (scopes 1, 2, and select scope 3*) annually. The primary
+            intent of this exercise is to be transparent. <br /> We will find
+            areas to make reductions and then purchase credible and verifiable
+            offsets each year accordingly. By 2030, we will expand GHG emissions
+            tracking to account for all applicable scope 3 emissions.
+          </p>
         </section>
       </section>
     </section>
