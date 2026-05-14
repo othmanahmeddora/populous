@@ -30,7 +30,7 @@ export const subNavLinks = [
       {
         id: 2,
         title: "Digital Future",
-        link: "/",
+        link: "/digitalFuture",
       },
       {
         id: 3,

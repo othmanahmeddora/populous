@@ -235,7 +235,7 @@ const Navbar = ({ navColor = "light" }) => {
                 <Link className="hover:underline" href="/sustainability">
                   Sustainability
                 </Link>
-                <Link className="hover:underline" href="/">
+                <Link className="hover:underline" href="/digitalFuture">
                   Digital Future
                 </Link>
                 <Link className="hover:underline" href="/">
