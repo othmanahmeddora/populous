@@ -13,9 +13,9 @@ const Sustainability = () => {
 
       <section className="flex flex-col gap-[10rem]">
         <section className="relative bg-[url(/img/10014.jpg)] bg-cover before:absolute before:inset-0 before:bg-black/35">
-          <section className="relative z-10 max-w-[1600px] px-[1rem] mx-auto pt-[25rem] pb-[2rem] flex flex-col justify-between gap-[30rem]">
+          <section className="relative z-10 max-w-[1600px] px-[1rem] mx-auto pt-[25rem] pb-[2rem] flex flex-col justify-between gap-[10rem] xl:gap-[30rem]">
             <h1
-              className="text-center text-light text-[8.75rem] tracking-tighter leading-[9rem]"
+              className="text-center text-light xl:text-[8.75rem] text-[4.5rem] tracking-tighter xl:leading-[9rem] leading-[4.5rem] mb-[20rem] xl:mb-0"
               data-scroll
               data-scroll-speed={0.1}
             >
@@ -24,7 +24,7 @@ const Sustainability = () => {
 
             <section className="flex items-start justify-between w-full">
               <p
-                className="flex-1 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
+                className="xl:flex-1 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
                 data-scroll
                 data-scroll-speed={0.1}
               >
@@ -39,7 +39,7 @@ const Sustainability = () => {
               <section className="flex-1"></section>
 
               <p
-                className="flex-1 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
+                className="xl:flex-1 text-[2.25rem] text-light leading-[2.5rem] tracking-tighter"
                 data-scroll
                 data-scroll-speed={0.05}
               >
@@ -53,7 +53,7 @@ const Sustainability = () => {
 
         {/* About */}
         <section className="max-w-[1600px] mx-auto w-full px-[1rem] z-10">
-          <p className="text-[2.25rem] text-left w-[55rem] tracking-tighter leading-[2.75rem]">
+          <p className="text-[2.25rem] text-left max-w-[55rem] tracking-tighter leading-[2.75rem]">
             Populous has been at the forefront of environmentally sustainable
             design solutions for public assembly venues since the formation of
             our practice. The future of venue design and events is an
@@ -261,7 +261,7 @@ const Sustainability = () => {
 
         {/* Road Map */}
         <section className="max-w-[1600px] mx-auto w-full px-[1rem] z-10 flex flex-col gap-[10rem]">
-          <p className="text-[2rem] text-left w-[32rem] tracking-tighter leading-[2.25rem]">
+          <p className="text-[2rem] text-left max-w-[32rem] tracking-tighter leading-[2.25rem]">
             Our Road Map: We are now tracking our firm’s ‘global’ operational
             emissions (scopes 1, 2, and select scope 3*) annually. The primary
             intent of this exercise is to be transparent. <br /> We will find
