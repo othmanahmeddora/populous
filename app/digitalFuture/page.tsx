@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { RiCornerDownRightLine } from "react-icons/ri";
+import CTA from "@/components/CTA/CTA";
 
 const DigitalFuture = () => {
   return (
@@ -252,7 +254,48 @@ const DigitalFuture = () => {
             </section>
           </section>
         </section>
+
+        {/* VenueTwin */}
+        <section className="max-w-[1600px] mx-auto w-full px-[1rem]">
+          <section className=" flex xl:flex-row flex-col items-start justify-between gap-[1rem]">
+            <Image
+              src="/img/10183.webp"
+              alt="Populous project"
+              width={500}
+              height={500}
+              className="flex-1 rounded-[.2rem]"
+            />
+
+            <section className="relative flex-1">
+              <h2 className="text-[1rem] leading-[2.5rem] font-[400] 2xl:mb-0 mb-[1rem] tracking-tighter">
+                Digital Product <br />{" "}
+                <span className="text-[2.25rem]">VenueTwin</span>
+              </h2>
+
+              <section className="2xl:absolute top-[500%] left-[50%]">
+                <p className="max-w-[18rem] mb-[1rem] leading-[1.4rem]">
+                  VenueTwin is an immersive 3D web platform from Populous that
+                  transforms the process of visualizing a real-world venue,
+                  whether as part of the design and review process, or once the
+                  venue is fully operational. It enables venue owners and
+                  operators to seamlessly explore, visualize, and create digital
+                  content within their venue space.
+                </p>
+
+                <Link
+                  href=""
+                  className="w-fit flex items-center gap-[1rem] px-[.5rem] py-[.5rem] text-[.8rem] font-[500] bg-dark text-light hover:bg-theme hover:text-white rounded-[.2rem]"
+                >
+                  <RiCornerDownRightLine className="text-[1rem]" />
+                  Learn more about VenueTwin
+                </Link>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
+
+      <CTA />
     </section>
   );
 };
