@@ -140,12 +140,12 @@ const Sustainability = () => {
         </section>
 
         {/* Commitment */}
-        <section className="px-[2rem]">
+        <section className="xl:px-[2rem]">
           <section className="rounded-[1rem] bg-theme">
             <section className="max-w-[1600px] mx-auto text-light">
-              <section className="w-full flex items-center justify-center pt-[2rem] pb-[5rem]">
-                <h2 className="text-center text-[5rem] w-[50rem] leading-[5rem] tracking-tighter">
-                  Commitment to Zero Carbon Projects
+              <section className="w-full flex items-center justify-center xl:pt-[2rem] pt-[5rem] xl:pb-[5rem] pb-[2rem]">
+                <h2 className="text-center xl:text-[5rem] text-[3rem] w-[50rem] xl:leading-[5rem] leading-[3rem] tracking-tighter">
+                  Commitment to Zero <br /> Carbon Projects
                 </h2>
               </section>
 
@@ -165,7 +165,7 @@ const Sustainability = () => {
 
                 <section className="flex flex-col xl:flex-row items-start justify-between w-full border-t pt-[1rem]">
                   <section className="flex-1">
-                    <h3 className="text-[1.325rem] max-w-[18rem] leading-[1.8rem] tracking-tighter">
+                    <h3 className="text-[1.5rem] max-w-[18rem] leading-[1.8rem] tracking-tighter mb-[1rem]">
                       Zero Carbon Certification for Climate Pledge Arena
                     </h3>
                   </section>
@@ -183,7 +183,7 @@ const Sustainability = () => {
 
                 <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem]">
                   <section className="flex-1">
-                    <h3 className="text-[1.325rem] max-w-[18rem] leading-[1.8rem] tracking-tighter">
+                    <h3 className="text-[1.5rem] max-w-[18rem] leading-[1.8rem] tracking-tighter mb-[1rem]">
                       Environmental Impact Measurement and Tracking
                     </h3>
                   </section>
@@ -202,7 +202,7 @@ const Sustainability = () => {
 
                 <section className="flex flex-col xl:flex-row items-start justify-between border-t pt-[1rem]">
                   <section className="flex-1">
-                    <h3 className="text-[1.325rem] max-w-[18rem] leading-[1.8rem] tracking-tighter">
+                    <h3 className="text-[1.5rem] max-w-[18rem] leading-[1.8rem] tracking-tighter mb-[1rem]">
                       Utilizing Recognized Frameworks
                     </h3>
                   </section>
